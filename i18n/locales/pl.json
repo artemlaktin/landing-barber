@@ -1,0 +1,152 @@
+{
+  "seo": {
+    "title":       "Grizzly Barber Shop \\| Jeden z Największych Barber Shopów w Szczecinie",
+    "description": "Grizzly Barber Shop to jedna z największych sieci barbershopów w Szczecinie. Profesjonalne strzyżenie męskie, broda, skin fade, klasyczne fryzury i rezerwacja online."
+  },
+  "nav": {
+    "about":    "O nas",
+    "services": "Usługi",
+    "masters":  "Mistrzowie",
+    "reviews":  "Opinie",
+    "gallery":  "Galeria",
+    "contacts": "Kontakt",
+    "menu":     "Menu"
+  },
+  "header": {
+    "phone_1": "+48 535 109 480",
+    "phone_2": "+48 535 109 481",
+    "address": "ul. Piaseczno 18a, Szczecin",
+    "hours":   "Pon–Sob: 09:00 – 20:00",
+    "booking": "Rezerwacja online"
+  },
+  "location_modal": {
+    "title":    "Wybierz lokalizację",
+    "subtitle": "Rezerwacja otworzy się na Booksy w nowej karcie"
+  },
+  "hero": {
+    "title":         "Kryjówka",
+    "title_accent":  "charakteru",
+    "description":   "Grizzly to barbershop w centrum miasta, gdzie zanikające tradycje spotykają nowoczesną precyzję. To miejsce celebrowania tego, co najważniejsze — twojego wizerunku. Od perfekcyjnych fadów po rytualną pielęgnację brody — nie tylko strzyżemy, budujemy pewność siebie.",
+    "badge_tradition": "Styl i tradycja",
+    "badge_family":    "Rodzina Grizzly",
+    "badge_loyalty":   "Lojalność klienta",
+    "img_alt":         "Wnętrze barbershopu Grizzly"
+  },
+  "services": {
+    "label":        "SERVICES",
+    "menu":         "THE MENU",
+    "title":        "Usługi &",
+    "title_accent": "rytuały",
+    "subtitle":     "Ceny mogą się różnić w zależności od doświadczenia barbera",
+    "tabs": {
+      "all":     "Wszystko",
+      "combo":   "Combo",
+      "hair":    "Strzyżenie",
+      "beard":   "Broda",
+      "special": "Specjalne"
+    },
+    "time_label":  "min",
+    "price_label": "zł",
+    "book_cta": "Zarezerwuj",
+    "items": {
+      "full_grizzly":  { "title": "The Full Grizzly",   "desc": "Strzyżenie i pielęgnacja brody — kompletny rytuał" },
+      "total_look":    { "title": "Grizzly Total Look", "desc": "Pełna transformacja: strzyżenie, broda i pielęgnacja" },
+      "cut":           { "title": "Grizzly's Cut",      "desc": "Klasyczne precyzyjne strzyżenie" },
+      "long_mane":     { "title": "Long Man Mane",      "desc": "Strzyżenie i modelowanie długich włosów" },
+      "grey_stealth":  { "title": "Grey Stealth",       "desc": "Siwizna pod kontrolą — koloryzacja i pielęgnacja" },
+      "beard_boom":    { "title": "Beard Boom",         "desc": "Modelowanie i pielęgnacja brody" },
+      "smooth_sharp":  { "title": "Smooth & Sharp",     "desc": "Tradycyjne golenie brzytwą" },
+      "face_ritual":   { "title": "Face Ritual",        "desc": "Kompleksowa pielęgnacja twarzy" },
+      "hot_wax":       { "title": "Hot Wax Detail",     "desc": "Depilacja woskiem — precyzja w każdym detalu" }
+    }
+  },
+  "instagram": {
+    "label":       "GALERIA",
+    "inside":      "INSIDE",
+    "title":       "Przez",
+    "title_accent": "dziurkę od klucza",
+    "post_alt":    "Post Grizzly"
+  },
+  "map": {
+    "label":   "POLAND",
+    "title":   "SZCZECIN",
+    "img_alt": "Mapa lokalizacji Grizzly Barbershop w Szczecinie"
+  },
+  "locations": {
+    "label":       "KONTAKT",
+    "find_us":     "ZNAJDŹ NAS",
+    "title":       "Trzy nory,",
+    "title_accent": "jedno miasto",
+    "subtitle":    "Wszystkie trzy lokalizacje czynne każdego dnia. Grizzly jest strategicznie rozmieszczony w Szczecinie, aby Twój rytuał był zawsze w zasięgu. Wybierz swoje miejsce, sprawdź godziny i wejdź.",
+    "phone_label": "Telefon",
+    "hours_label": "Godziny",
+    "maps_btn":    "Otwórz Google Maps",
+    "items": {
+      "mickiewicza": {
+        "name":    "Grizzly · Mickiewicza",
+        "address": "Adama Mickiewicza 36a",
+        "hours":   "Pon–Nd 09:30 – 19:00"
+      },
+      "piastow": {
+        "name":    "Grizzly · Piastów",
+        "address": "al. Piastów 10",
+        "hours":   "Pon–Nd 11:00 – 19:00"
+      },
+      "warcisaw": {
+        "name":    "Grizzly · Warcisława",
+        "address": "Księcia Warcisława I 27B",
+        "hours":   "Pon–Nd 09:00 – 20:00"
+      }
+    }
+  },
+  "about": {
+    "label": "O NAS",
+    "title": "THE HOUSE",
+    "hero_title":  "Kryjówka",
+    "hero_accent": "charakteru",
+    "desc_1": "Grizzly to terytorium, gdzie miejski hałas znika. Stworzyliśmy przestrzeń w Szczecinie, gdzie stuletnie tradycje spotykają nowoczesną precyzję. Miejsce, w którym można się naładować z premium drinkiem, podczas gdy nasi mistrzowie skupiają się na tym, co najważniejsze — Twoim wizerunku.",
+    "desc_2": "Od perfekcyjnych fadów po rytualną pielęgnację brody — nie tylko strzyżemy, budujemy pewność siebie. Dbając o Twoją unikalną anatomię i styl, zapewniamy, że wyjdziesz w najlepszej formie. Odchyl się, poczuj atmosferę i zostaw resztę ekspertom.",
+    "img_alt": "Zespół Grizzly Barbershop",
+    "cards": [
+      { "title": "STAL I TRADYCJA",         "desc": "Brzytwy i klasyczne techniki pielęgnacji, sprawdzone przez pokolenia" },
+      { "title": "RODZINA GRIZZLY",         "desc": "Miejsce, w którym jesteś traktowany jak jeden z nas" },
+      { "title": "ATMOSFERA GRIZZLY",       "desc": "Kawa, muzyka, rozmowy i obsługa, dla której chce się wracać" },
+      { "title": "LOJALNOŚĆ POKOLEŃ",       "desc": "Cenimy stałość. Każda 10. wizyta jest bezpłatna" }
+    ]
+  },
+  "masters": {
+    "label": "ZESPÓŁ",
+    "title": "Bractwo",
+    "title_accent": "talentu",
+    "subtitle": "Każdy fotel w naszym salonie napędza charakter. Wybierz swojego barbera poniżej — kliknij portret, aby poznać jego historię.",
+    "no_bio": "Bio wkrótce",
+    "show_more": "Pokaż więcej",
+    "cta": "Zarezerwuj sesję",
+    "close": "Zamknij",
+    "follow_work": "Śledź jego/jej pracę",
+    "roles": {
+      "senior": "Senior Barber",
+      "barber": "Barber",
+      "junior": "Junior Barber",
+      "manager": "Manager"
+    }
+  },
+  "reviews": {
+    "label": "OPINIE",
+    "voices": "GŁOSY",
+    "title": "Mówią o",
+    "title_accent": "nas",
+    "rating_label": "Na podstawie 2 714 opinii · Google & Booksy",
+    "prev": "Poprzednia opinia",
+    "next": "Następna opinia"
+  },
+  "footer": {
+    "rights":    "Wszelkie prawa zastrzeżone",
+    "follow_us": "Obserwuj nas",
+    "claim":     "Zarezerwuj swoje miejsce",
+    "languages": "JĘZYKI",
+    "privacy":   "Polityka prywatności",
+    "terms":     "Regulamin",
+    "cookies":   "Cookies"
+  }
+}

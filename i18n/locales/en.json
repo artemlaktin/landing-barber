@@ -1,0 +1,152 @@
+{
+  "seo": {
+    "title":       "Grizzly Barber Shop \\| One of the Largest Barber Shops in Szczecin",
+    "description": "One of the largest barber shop brands in Szczecin. Premium men's haircuts, beard grooming, skin fades, classic styles and easy online booking."
+  },
+  "nav": {
+    "about":    "About",
+    "services": "Services",
+    "masters":  "Masters",
+    "reviews":  "Reviews",
+    "gallery":  "Gallery",
+    "contacts": "Contacts",
+    "menu":     "Menu"
+  },
+  "header": {
+    "phone_1": "+48 535 109 480",
+    "phone_2": "+48 535 109 481",
+    "address": "ul. Piaseczno 18a, Szczecin",
+    "hours":   "Mon–Sat: 09:00 – 20:00",
+    "booking": "Book online"
+  },
+  "location_modal": {
+    "title":    "Choose a location",
+    "subtitle": "Booking will open on Booksy in a new tab"
+  },
+  "hero": {
+    "title":         "The lair of",
+    "title_accent":  "character",
+    "description":   "Grizzly is a barbershop in the heart of the city where fading traditions meet modern precision. It's a place to recognize the most important thing — your image. From sharp fades to ritual beard trims, we don't just cut hair; we build confidence.",
+    "badge_tradition": "Style & Tradition",
+    "badge_family":    "The Grizzly Family",
+    "badge_loyalty":   "Client Loyalty",
+    "img_alt":         "Grizzly Barber Shop interior"
+  },
+  "services": {
+    "label":        "SERVICES",
+    "menu":         "THE MENU",
+    "title":        "Services &",
+    "title_accent": "rituals",
+    "subtitle":     "Prices may vary depending on the barber's seniority",
+    "tabs": {
+      "all":     "All",
+      "combo":   "Combo",
+      "hair":    "Haircut",
+      "beard":   "Beard",
+      "special": "Special"
+    },
+    "time_label":  "min",
+    "price_label": "PLN",
+    "book_cta": "Book now",
+    "items": {
+      "full_grizzly":  { "title": "The Full Grizzly",   "desc": "Haircut + beard treatment — complete ritual" },
+      "total_look":    { "title": "Grizzly Total Look", "desc": "Full transformation: haircut, beard and care" },
+      "cut":           { "title": "Grizzly's Cut",      "desc": "Classic precision haircut" },
+      "long_mane":     { "title": "Long Man Mane",      "desc": "Cut and styling for long hair" },
+      "grey_stealth":  { "title": "Grey Stealth",       "desc": "Grey under control — coloring and care" },
+      "beard_boom":    { "title": "Beard Boom",         "desc": "Beard shaping and grooming" },
+      "smooth_sharp":  { "title": "Smooth & Sharp",     "desc": "Traditional straight razor shave" },
+      "face_ritual":   { "title": "Face Ritual",        "desc": "Full face care treatment" },
+      "hot_wax":       { "title": "Hot Wax Detail",     "desc": "Wax hair removal — precision in every detail" }
+    }
+  },
+  "instagram": {
+    "label":       "GALLERY",
+    "inside":      "INSIDE",
+    "title":       "Through the",
+    "title_accent": "keyhole",
+    "post_alt":    "Grizzly post"
+  },
+  "map": {
+    "label":   "POLAND",
+    "title":   "SZCZECIN",
+    "img_alt": "Map of Grizzly Barbershop locations in Szczecin"
+  },
+  "locations": {
+    "label":       "CONTACTS",
+    "find_us":     "FIND US",
+    "title":       "Three dens",
+    "title_accent": "one city",
+    "subtitle":    "All three locations open every day. Grizzly is strategically located across Szczecin to ensure your ritual is always within reach. Choose your spot, check the hours, and step in.",
+    "phone_label": "Phone",
+    "hours_label": "Hours",
+    "maps_btn":    "Open Google Maps",
+    "items": {
+      "mickiewicza": {
+        "name":    "Grizzly · Mickiewicza",
+        "address": "Adama Mickiewicza 36a",
+        "hours":   "Mon–Sun 09:30 – 19:00"
+      },
+      "piastow": {
+        "name":    "Grizzly · Piastów",
+        "address": "al. Piastów 10",
+        "hours":   "Mon–Sun 11:00 – 19:00"
+      },
+      "warcisaw": {
+        "name":    "Grizzly · Warcisława",
+        "address": "Księcia Warcisława I 27B",
+        "hours":   "Mon–Sun 09:00 – 20:00"
+      }
+    }
+  },
+  "about": {
+    "label": "ABOUT US",
+    "title": "THE HOUSE",
+    "hero_title":  "The lair of",
+    "hero_accent": "character",
+    "desc_1": "Grizzly is a territory where city noise fades away. We've built a space in Szczecin where century-old traditions meet modern precision. A place to recharge with a premium drink while our masters focus on the most important thing — your image.",
+    "desc_2": "From sharp fades to ritual beard trims, we don't just cut hair; we build confidence. By focusing on your unique anatomy and vibe, we ensure you leave in your best form. Just lean back, enjoy the atmosphere, and let the experts handle the rest.",
+    "img_alt": "Grizzly Barbershop team",
+    "cards": [
+      { "title": "STEEL & TRADITION",    "desc": "Hand-stropped razors and classic grooming techniques" },
+      { "title": "THE GRIZZLY FAMILY",   "desc": "A place where you're treated like one of our own" },
+      { "title": "GRIZZLY ATMOSPHERE",   "desc": "Coffee, music, conversation, and service worth coming back for" },
+      { "title": "LEGACY LOYALTY",       "desc": "We value consistency. Every 10th haircut is free of charge" }
+    ]
+  },
+  "masters": {
+    "label": "THE TEAM",
+    "title": "A brotherhood of",
+    "title_accent": "talent",
+    "subtitle": "Every chair in our shop is powered by character. Pick your barber below — click on a portrait to see their story.",
+    "no_bio": "Bio coming soon",
+    "show_more": "Show more",
+    "cta": "Book your session",
+    "close": "Close",
+    "follow_work": "Follow their work",
+    "roles": {
+      "senior": "Senior Barber",
+      "barber": "Barber",
+      "junior": "Junior Barber",
+      "manager": "Manager"
+    }
+  },
+  "reviews": {
+    "label": "REVIEWS",
+    "voices": "VOICES",
+    "title": "Said about",
+    "title_accent": "us",
+    "rating_label": "Based on 2,714 reviews · Google & Booksy",
+    "prev": "Previous review",
+    "next": "Next review"
+  },
+  "footer": {
+    "rights":    "All rights reserved",
+    "follow_us": "Follow us",
+    "claim":     "Claim your chair",
+    "languages": "LANGUAGES",
+    "privacy":   "Privacy Policy",
+    "terms":     "Terms & Conditions",
+    "cookies":   "Cookies"
+  }
+}

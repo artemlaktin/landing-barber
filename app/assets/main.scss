@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Furius';
+  src: url('~~/assets/fonts/furius-3.woff2') format('woff2'),
+       url('~~/assets/fonts/furius-3.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Made Winter Inline';
+  src: url('~~/assets/fonts/made-winter-inline.woff2') format('woff2'),
+       url('~~/assets/fonts/made-winter-inline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Onest', sans-serif;
+  color: #0E1512;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-family: 'Spectral', serif;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.mb24 {
+  margin-bottom: 24px;
+}
+
+section {
+  padding: var(--default-padding);
+}
+
+:root {
+  --main-color: #002616E6;
+  --default-padding: 60px 16px;
+  @media (min-width: 1280px) {
+    --default-padding: 120px 80px;
+  }
+}
