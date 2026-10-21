@@ -1,32 +1,15 @@
 <script setup lang="ts">
 import LogoContainer from "@components/ui/LogoContainer.vue"
-import {BOOKSY_LINKS} from "@helpers/masters"
+import {BOOKSY_LINKS, INSTAGRAM, FACEBOOK, THREADS} from "@helpers/contacts"
 
 const {t, locale} = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
 const year = new Date().getFullYear()
 
-interface SocialLink {
-  label: string
-  href: string
-}
-
-const instagramLinks: SocialLink[] = [
-  {label: 'SZCZECIN', href: 'https://www.instagram.com/grizzly_szczecin_/'},
-  {label: 'MICKIEWICZ', href: 'https://www.instagram.com/grizzly_mickiewicza/'},
-  {label: 'NIEBUSZEWO', href: 'https://www.instagram.com/grizzly_niebuszewo'},
-]
-
-// TODO: no real Facebook link exists in the project yet — placeholder until supplied
-const facebookLinks: SocialLink[] = [
-  {label: 'NIEBUSZEWO', href: '#'},
-]
-
-const threadsLinks: SocialLink[] = [
-  {label: '@grizzly_mickiewicza', href: 'https://www.threads.com/@grizzly_mickiewicza'},
-  {label: '@grizzly_niebuszewo', href: 'https://www.threads.com/@grizzly_niebuszewo_'},
-]
+const instagramLinks = INSTAGRAM
+const facebookLinks = FACEBOOK
+const threadsLinks = THREADS.map(l => ({...l, label: l.handle}))
 
 const bookingLocations = Object.keys(BOOKSY_LINKS)
 

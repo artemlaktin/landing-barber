@@ -13,10 +13,6 @@
     "menu":     "Menu"
   },
   "header": {
-    "phone_1": "+48 535 109 480",
-    "phone_2": "+48 535 109 481",
-    "address": "ul. Piaseczno 18a, Szczecin",
-    "hours":   "Pon–Sob: 09:00 – 20:00",
     "booking": "Rezerwacja online"
   },
   "location_modal": {
@@ -81,22 +77,10 @@
     "phone_label": "Telefon",
     "hours_label": "Godziny",
     "maps_btn":    "Otwórz Google Maps",
-    "items": {
-      "mickiewicza": {
-        "name":    "Grizzly · Mickiewicza",
-        "address": "Adama Mickiewicza 36a",
-        "hours":   "Pon–Nd 09:30 – 19:00"
-      },
-      "piastow": {
-        "name":    "Grizzly · Piastów",
-        "address": "al. Piastów 10",
-        "hours":   "Pon–Nd 11:00 – 19:00"
-      },
-      "warcisaw": {
-        "name":    "Grizzly · Warcisława",
-        "address": "Księcia Warcisława I 27B",
-        "hours":   "Pon–Nd 09:00 – 20:00"
-      }
+    "days": {
+      "everyday": "Pon–Nd",
+      "mon_sat":  "Pon–Sob",
+      "mon_fri":  "Pon–Pt"
     }
   },
   "about": {

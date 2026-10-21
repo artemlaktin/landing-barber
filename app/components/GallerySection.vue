@@ -2,19 +2,11 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay } from 'swiper/modules'
 import SectionHeading from "@components/ui/SectionHeading.vue"
+import { INSTAGRAM } from "@helpers/contacts"
 
 const { t } = useI18n()
 
-interface Handle {
-  label: string
-  href: string
-}
-
-const handles: Handle[] = [
-  { label: '@grizzly_szczecin_',   href: 'https://www.instagram.com/grizzly_szczecin_/' },
-  { label: '@grizzly_mickiewicza', href: 'https://www.instagram.com/grizzly_mickiewicza/' },
-  { label: '@grizzly_niebuszewo', href: 'https://www.instagram.com/grizzly_niebuszewo' },
-]
+const handles = INSTAGRAM.map(l => ({ label: l.handle, href: l.href }))
 
 const photos: string[] = [
   '/img/gallery/full-grizzly.webp',

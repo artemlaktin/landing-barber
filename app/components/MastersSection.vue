@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import SectionHeading from "@components/ui/SectionHeading.vue"
-import {masters, type Master, BOOKSY_LINKS} from "@helpers/masters"
+import {masters, type Master} from "@helpers/masters"
+import {BOOKSY_LINKS} from "@helpers/contacts"
 
 const {t, locale} = useI18n()
 

@@ -1,83 +1,79 @@
-# Rules for Claude — Jojo Frontend
+# Технические правила — Grizzly Landing
 
-## Project Context
+## Стек
 
-- **Project:** Landing для барбершопа
-- **Stack:** Nuxt 4 + Vue 3 (Composition API, `<script setup>`)
-- **srcDir:** `app/` — весь код приложения внутри этой папки
+- Nuxt 4 + Vue 3 (Composition API, `<script setup lang="ts">`)
+- srcDir: `app/` — весь код приложения внутри этой папки
+- i18n: `@nuxtjs/i18n`, стратегия `prefix` (`/pl`, `/en`, `/uk`, `/ru`), язык по умолчанию — `pl`
+- Стили: SCSS, общий файл `app/assets/main.scss`
+- Слайдеры: Swiper
 
----
+## Команды
 
-## Security
+- `npm run dev` — локальный сервер на http://localhost:3000 (открывать `/pl`)
+- `npm run build` — сборка; обязательная проверка после любых изменений
 
-- Never read, write, or reference `.env` files
-- Never expose or log API keys, secrets, environment variables
-- `runtimeConfig` значения считать приватными — не выводить в шаблоны напрямую
+## Структура
 
----
+| Что | Где |
+|---|---|
+| Страница | `app/pages/index.vue` (+ SEO-мета и JSON-LD) |
+| Секции страницы | `app/components/*Section.vue` |
+| UI-компоненты | `app/components/ui/` |
+| Контент-данные | `app/constants-and-helpers/` — `masters.ts`, `services.ts` (цены), `contacts.ts` (точки, Booksy, соцсети) |
+| Composables | `app/composables/` |
+| API-слой | `app/api/pipelines/` |
+| Серверные эндпоинты | `server/api/` (отзывы Google через SerpAPI) |
+| SVG-иконки (спрайт) | `assets/img/svg/` |
+| Картинки для сайта | `public/img/` (webp) |
+| Исходники фото | `assets/photo`, `assets/landing_bio`, `assets/gallery` — не трогать |
+| Переводы | `i18n/locales/{pl,en,uk,ru}.json` |
 
-## File Structure Rules
+## Алиасы
 
-| Что                   | Где                                                                                            |
-|-----------------------|------------------------------------------------------------------------------------------------|
-| Страницы              | `app/pages/`                                                                                   |
-| Компоненты UI         | `app/components/ui/`                                                                           |
-| Page-level компоненты | `app/components/<PageName>/`                                                                   |
-| Stores (Pinia)        | `app/stores/`                                                                                  |
-| Composables           | `app/composables/`                                                                             |
-| API-слой              | `app/api/pipelines/`                                                                           |
-| SVG-иконки (спрайт)   | `assets/img/svg/`                                                                              |
-| Статичные изображения | `public/image/`                                                                                |
-| Скриншоты для Claude  | `/desktop/claudeScreen/` (не в проекте)                                                        |
-| i18n-переводы         | `i18n/locales/pl.json`, `i18n/locales/en.json`, `i18n/locales/uk.json`, `i18n/locales/ru.json` |
-
----
-
-## Icons
-
-- SVG-иконки кладутся в `assets/img/svg/` — они подхватываются vite-plugin-svg-icons
-- Использование в шаблоне: `<svg class="svg"><use href="#icon-name"></use></svg>`
-- Все цвета SVG автоматически заменяются на `currentColor` через svgo-плагин — не прописывать цвета внутри SVG вручную
-- Логотип, иллюстрации, декоративные SVG — в `assets/img/svg/` с префиксом по смыслу
-
----
-
-## Vue / Nuxt Conventions
-
-- `<script setup>` — всегда, Options API не использовать
-- Composition API composables из `app/composables/`
-- `useSafeAsyncData` вместо голого `useAsyncData` для защиты от ошибок
-- HTTP-запросы через `$api` (plugin `app/plugins/api.js`), не через axios напрямую
-- Responsive-логика через `useMedia` composable + `<ClientOnly>` для desktop/mobile компонентов
-- `useNotyf()` для уведомлений
-
-## Code Style
-
-- Не добавлять лишние комментарии, docstrings, type annotations там, где код очевиден
-- Не создавать файлы без необходимости — предпочитать редактирование существующих
-- Не добавлять функционал сверх того, что просит задача
-- Не создавать абстракции для одноразового использования
-- Валидация — только на границах системы (ввод пользователя, внешние API)
-- Если не знаешь как писать код смотри паттерн в JoJo_Frontend
-- Добавляй импорты компонента
-
----
-
-## Aliases (nuxt.config.js)
-
-```js
-'@components' → '/components'   // от srcDir (app/)
-'@helpers'    → '/helpers-constans'
-'@api'        → '/api'
-'@assets'     → 'assets/'       // корень проекта
+```
+@components → app/components
+@helpers    → app/constants-and-helpers
+@api        → app/api
+@assets     → assets
+@appTypes   → app/types
 ```
 
----
+## Иконки
 
-## Do NOT
+- SVG кладутся в `assets/img/svg/`, подхватываются vite-plugin-svg-icons, id = имя файла
+- Использование: `<svg class="svg"><use href="#icon-name"></use></svg>`
+- Цвета автоматически заменяются на `currentColor` — не прописывать цвета внутри SVG
 
-- Читать или изменять `.env` файлы
-- Использовать `axios` напрямую (только `$api`)
-- Создавать SVG-иконки вне `assets/img/svg/`
-- Писать строки без i18n-ключа
+## Данные
+
+- Контакты точек, Booksy, соцсети — только из `@helpers/contacts`; цены услуг — только из `@helpers/services`.
+  Не дублировать эти значения в компонентах, json или JSON-LD в `index.vue` — брать из этих файлов.
+
+## i18n
+
+- Никаких строк в шаблонах без i18n-ключа
+- Новый ключ добавляется сразу во все 4 файла, в то же место структуры
+- После правки json проверять валидность: `node -e "['pl','en','uk','ru'].forEach(l=>JSON.parse(require('fs').readFileSync('i18n/locales/'+l+'.json','utf8')))"`
+- Проверять, что набор ключей во всех 4 файлах совпадает
+
+## Vue / Nuxt
+
+- Только `<script setup>`, без Options API
+- `useSafeAsyncData` вместо голого `useAsyncData`
+- HTTP-запросы через `$api` (`app/plugins/api.ts`), не axios
+- Явно импортировать используемые компоненты (как в `app/pages/index.vue`)
+
+## Стиль кода
+
+- Не добавлять лишние комментарии и абстракции
+- Не создавать файлы без необходимости — предпочитать редактирование существующих
+- Не добавлять функционал сверх задачи
+- Повторять паттерны соседнего кода
+
+## Нельзя
+
+- Читать или изменять `.env`; выводить `runtimeConfig` в шаблоны
+- Использовать `axios` напрямую
+- Класть SVG-иконки вне `assets/img/svg/`
 - Удалять моки без замены на API

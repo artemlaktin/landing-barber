@@ -1,0 +1,93 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(./i18n/locales/**)",
+      "Edit(./app/components/**)",
+      "Edit(./app/constants-and-helpers/**)",
+      "Edit(./app/pages/**)",
+      "Edit(./app/assets/**)",
+      "Write(./public/img/**)",
+      "Write(./assets/photo/**)",
+      "Write(./assets/landing_bio/**)",
+      "Write(./assets/gallery/**)",
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npx --yes sharp-cli *)",
+      "Bash(curl -s * http://localhost:3000*)",
+      "Bash(file *)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(git switch*)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git fetch*)",
+      "Bash(git pull --ff-only*)",
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__select_page",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__resize_page",
+      "mcp__chrome-devtools__emulate",
+      "mcp__chrome-devtools__wait_for",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__get_css_styles",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__chrome-devtools__list_console_messages",
+      "mcp__chrome-devtools__list_network_requests",
+      "mcp__chrome-devtools__lighthouse_audit"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Edit(./.env)",
+      "Edit(./.env.*)",
+      "Write(./.env)",
+      "Write(./.env.*)",
+      "Bash(cat .env*)",
+      "Bash(git push)",
+      "Bash(git push origin main*)",
+      "Bash(git push origin HEAD:main*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git reset --hard*)",
+      "Bash(git clean*)",
+      "Bash(rm -rf*)"
+    ],
+    "ask": [
+      "Bash(git push*)",
+      "Bash(git restore*)",
+      "Bash(git revert*)",
+      "Bash(npm install*)",
+      "Edit(./nuxt.config.ts)",
+      "Edit(./package.json)",
+      "Edit(./server/**)",
+      "Edit(./app/plugins/**)",
+      "Edit(./app/api/**)",
+      "Edit(./app/composables/**)",
+      "Write(./server/**)",
+      "Write(./app/plugins/**)",
+      "Write(./app/api/**)",
+      "Write(./app/composables/**)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-i18n.mjs\""
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "node .claude/statusline.mjs"
+  }
+}

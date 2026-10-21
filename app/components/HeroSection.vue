@@ -1,29 +1,17 @@
 <script setup lang="ts">
 import LogoContainer from "@components/ui/LogoContainer.vue";
 import LocationModal from "@components/ui/LocationModal.vue";
-import type {Locations} from "~/types/locations";
+import {LOCATIONS} from "@helpers/contacts";
 
 const {t} = useI18n()
 
 const showLocationModal = ref(false)
 
-const locations = Object.freeze<Locations[]>([
-  {
-    name: 'Adama Mickiewicza 36a',
-    workTime: '09:30 – 19:00',
-    phoneNumber: '+48 536 338 445'
-  },
-  {
-    name: 'al. Piastów 10',
-    workTime: '11:00 – 19:00',
-    phoneNumber: '+48 530 463 556'
-  },
-  {
-    name: 'Księcia Warcisława I 27B',
-    workTime: '09:00 – 20:00',
-    phoneNumber: '+48 530 892 003'
-  }
-])
+const locations = LOCATIONS.map(l => ({
+  name: l.address,
+  workTime: `${l.open} – ${l.close}`,
+  phoneNumber: l.phone,
+}))
 </script>
 <template>
   <div class="hero">

@@ -5,6 +5,7 @@ import GallerySection from "@components/GallerySection.vue"
 import LocationsSection from "@components/LocationsSection.vue"
 import MapSection from "@components/MapSection.vue"
 import FooterSection from "@components/FooterSection.vue"
+import {LOCATIONS, MAIN_GOOGLE_PHONE, WORK_DAYS_SCHEMA, INSTAGRAM, THREADS, FACEBOOK} from "@helpers/contacts"
 
 const { t, locale } = useI18n()
 
@@ -53,57 +54,28 @@ const structuredData = computed(() => ({
   logo: `${SITE_URL}/android-chrome-512x512.png`,
   priceRange: '$$',
   currenciesAccepted: 'PLN',
-  telephone: '+48535109480',
+  telephone: MAIN_GOOGLE_PHONE,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Szczecin',
     addressCountry: 'PL',
   },
   areaServed: 'Szczecin',
-  sameAs: [
-    'https://www.instagram.com/grizzly_szczecin_/',
-    'https://www.instagram.com/grizzly_mickiewicza/',
-    'https://www.instagram.com/grizzly_niebuszewo',
-    'https://www.threads.com/@grizzly_mickiewicza',
-  ],
-  department: [
-    {
-      '@type': 'HairSalon',
-      name: 'Grizzly · Mickiewicza',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Adama Mickiewicza 36a',
-        addressLocality: 'Szczecin',
-        addressCountry: 'PL',
-      },
-      telephone: '+48535109480',
-      openingHours: 'Mo-Su 09:30-19:00',
+  sameAs: [...INSTAGRAM, ...THREADS, ...FACEBOOK]
+    .map(l => l.href)
+    .filter(href => href.startsWith('https://')),
+  department: LOCATIONS.map(l => ({
+    '@type': 'HairSalon',
+    name: `Grizzly · ${l.title}`,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: l.address,
+      addressLocality: 'Szczecin',
+      addressCountry: 'PL',
     },
-    {
-      '@type': 'HairSalon',
-      name: 'Grizzly · Piastów',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'al. Piastów 10',
-        addressLocality: 'Szczecin',
-        addressCountry: 'PL',
-      },
-      telephone: '+48535109480',
-      openingHours: 'Mo-Su 11:00-19:00',
-    },
-    {
-      '@type': 'HairSalon',
-      name: 'Grizzly · Niebuszewo',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Księcia Warcisława I 27B',
-        addressLocality: 'Szczecin',
-        addressCountry: 'PL',
-      },
-      telephone: '+48535109481',
-      openingHours: 'Mo-Su 09:00-20:00',
-    },
-  ],
+    telephone: l.googlePhone,
+    openingHours: `${WORK_DAYS_SCHEMA[l.days]} ${l.open}-${l.close}`,
+  })),
 }))
 
 useHead({

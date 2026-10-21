@@ -13,10 +13,6 @@
     "menu":     "Меню"
   },
   "header": {
-    "phone_1": "+48 535 109 480",
-    "phone_2": "+48 535 109 481",
-    "address": "ул. Piaseczno 18a, Щецин",
-    "hours":   "Пн–Сб: 09:00 – 20:00",
     "booking": "Запись онлайн"
   },
   "location_modal": {
@@ -81,22 +77,10 @@
     "phone_label": "Телефон",
     "hours_label": "Часы",
     "maps_btn":    "Открыть Google Maps",
-    "items": {
-      "mickiewicza": {
-        "name":    "Grizzly · Mickiewicza",
-        "address": "Adama Mickiewicza 36a",
-        "hours":   "Пн–Вс 09:30 – 19:00"
-      },
-      "piastow": {
-        "name":    "Grizzly · Piastów",
-        "address": "al. Piastów 10",
-        "hours":   "Пн–Вс 11:00 – 19:00"
-      },
-      "warcisaw": {
-        "name":    "Grizzly · Warcisława",
-        "address": "Księcia Warcisława I 27B",
-        "hours":   "Пн–Вс 09:00 – 20:00"
-      }
+    "days": {
+      "everyday": "Пн–Вс",
+      "mon_sat":  "Пн–Сб",
+      "mon_fri":  "Пн–Пт"
     }
   },
   "about": {

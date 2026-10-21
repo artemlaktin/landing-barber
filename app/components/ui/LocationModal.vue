@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {BOOKSY_LINKS} from "@helpers/masters";
+import {BOOKSY_LINKS} from "@helpers/contacts";
 
 defineProps<{ show: boolean }>()
 const emit = defineEmits<{ close: [] }>()

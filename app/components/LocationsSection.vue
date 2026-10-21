@@ -1,19 +1,8 @@
 <script setup lang="ts">
 import SectionHeading from "@components/ui/SectionHeading.vue"
+import { LOCATIONS as locations } from "@helpers/contacts"
 
 const { t } = useI18n()
-
-interface Location {
-  key: string
-  phone: string
-  mapsUrl: string
-}
-
-const locations: Location[] = [
-  { key: 'mickiewicza', phone: '+48 536 338 445', mapsUrl: 'https://maps.app.goo.gl/6e3tguV3tt41nw3s7' },
-  { key: 'piastow',    phone: '+48 530 463 556', mapsUrl: 'https://maps.app.goo.gl/mpeXZpsmxRoHm5rb9' },
-  { key: 'warcisaw',   phone: '+48 530 892 003', mapsUrl: 'https://maps.app.goo.gl/PREAnsSgxQJrJZjv8' },
-]
 </script>
 
 <template>
@@ -29,8 +18,8 @@ const locations: Location[] = [
     <div class="locations__grid">
       <div v-for="loc in locations" :key="loc.key" class="locations__card">
         <div class="locations__card-top">
-          <p class="locations__name">{{ t(`locations.items.${loc.key}.name`) }}</p>
-          <p class="locations__address">{{ t(`locations.items.${loc.key}.address`) }}</p>
+          <p class="locations__name">{{ loc.name }}</p>
+          <p class="locations__address">{{ loc.address }}</p>
         </div>
 
         <div class="locations__fields">
@@ -45,7 +34,7 @@ const locations: Location[] = [
             <p class="locations__field-label">{{ t('locations.hours_label') }}</p>
             <p class="locations__field-value">
               <svg class="locations__icon"><use href="#clock"></use></svg>
-              {{ t(`locations.items.${loc.key}.hours`) }}
+              {{ t(`locations.days.${loc.days}`) }} {{ loc.open }} – {{ loc.close }}
             </p>
           </div>
         </div>

@@ -1,11 +1,5 @@
 export type MasterRole = 'Senior Barber' | 'Manager' | 'Barber' | 'Junior Barber'
 
-export const BOOKSY_LINKS: Record<string, string> = {
-  'Mickiewicza': 'https://booksy.com/pl-pl/263864_grizzly-barbershop-mickiewicza_barber-shop_18078_szczecin?do=invite#ba_s=dl_1',
-  'Niebuszewo':  'https://booksy.com/pl-pl/220732_grizzly-barber-shop-niebuszewo_barber-shop_18078_szczecin?do=invite&_branch_match_id=1614269025715788005',
-  'Piastów':     'https://booksy.com/pl-pl/115246_grizzly-barber-shop_barber-shop_18078_szczecin?do=invite&_branch_match_id=1614269025715788005',
-}
-
 export type LocalizedBio = Partial<Record<'pl' | 'en' | 'uk' | 'ru', string>>
 
 export interface Master {
