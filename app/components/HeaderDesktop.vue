@@ -41,7 +41,6 @@ const langs = [
             GRIZZLY
           </span>
         </div>
-        <div class="header__nav-item" @click="scrollToElement('reviews')">{{ t('nav.reviews') }}</div>
         <div class="header__nav-item" @click="scrollToElement('gallery')">{{ t('nav.gallery') }}</div>
         <div class="header__nav-item" @click="scrollToElement('contacts')">{{ t('nav.contacts') }}</div>
       </nav>
