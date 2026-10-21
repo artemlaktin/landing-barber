@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import MastersSection from "@components/MastersSection.vue"
-import ReviewsSection from "@components/ReviewsSection.vue"
 import GallerySection from "@components/GallerySection.vue"
 import LocationsSection from "@components/LocationsSection.vue"
 import MapSection from "@components/MapSection.vue"
@@ -96,7 +95,6 @@ useHead({
     <AboutUs/>
     <ServicesSection/>
     <MastersSection/>
-    <ReviewsSection/>
     <GallerySection/>
     <LocationsSection/>
     <MapSection/>
