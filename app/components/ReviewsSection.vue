@@ -6,21 +6,30 @@ import SectionHeading from "@components/ui/SectionHeading.vue"
 const { t, locale } = useI18n()
 
 interface Review {
-  id: number
+  id: string
   name: string
   platform: 'google'
   avatar: string
+  rating: number
   text: string
 }
 
-const { data: reviews } = await useFetch<Review[]>('/api/reviews', {
+interface ReviewsResponse {
+  rating: number
+  reviews: Review[]
+}
+
+const { data } = await useFetch<ReviewsResponse>('/api/reviews', {
   query: { locale },
-  default: () => [] as Review[],
+  default: () => ({ rating: 5, reviews: [] }),
 })
 
-const brokenAvatars = ref(new Set<number>())
+const reviews = computed(() => data.value.reviews)
+const rating = computed(() => data.value.rating)
 
-function onAvatarError(id: number) {
+const brokenAvatars = ref(new Set<string>())
+
+function onAvatarError(id: string) {
   brokenAvatars.value = new Set(brokenAvatars.value).add(id)
 }
 
@@ -42,9 +51,9 @@ function onSwiper(instance: SwiperInstance) {
       </div>
       <div class="reviews__rating">
         <div class="reviews__rating-top">
-          <span class="reviews__score title">5.0</span>
+          <span class="reviews__score title">{{ rating.toFixed(1) }}</span>
           <div class="reviews__stars">
-            <span v-for="i in 5" :key="i" class="reviews__star">★</span>
+            <span v-for="i in 5" :key="i" class="reviews__star" :class="{ 'reviews__star--empty': i > Math.round(rating) }">★</span>
           </div>
         </div>
         <p class="reviews__rating-label">{{ t('reviews.rating_label') }}</p>
@@ -87,7 +96,7 @@ function onSwiper(instance: SwiperInstance) {
               <div class="reviews__card-meta">
                 <p class="reviews__card-name">{{ review.name }}</p>
                 <div class="reviews__card-stars">
-                  <span v-for="i in 5" :key="i">★</span>
+                  <span v-for="i in 5" :key="i" :class="{ 'reviews__star--empty': i > review.rating }">★</span>
                 </div>
               </div>
               <div class="reviews__platform">
@@ -180,6 +189,10 @@ function onSwiper(instance: SwiperInstance) {
   &__star {
     font-size: 20px;
     color: #C5A367;
+  }
+
+  &__star--empty {
+    opacity: 0.25;
   }
 
   &__rating-label {
