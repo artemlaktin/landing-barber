@@ -68,6 +68,21 @@
     "title":   "SZCZECIN",
     "img_alt": "Mapa lokalizacji Grizzly Barbershop w Szczecinie"
   },
+  "loyalty": {
+    "label": "KARTA KLIENTA",
+    "card": "GRIZZLY",
+    "title": "Co 10. strzyżenie",
+    "title_accent": "gratis",
+    "subtitle": "Karta Grizzly w Twoim telefonie — w Apple Wallet lub Google Wallet. Bez aplikacji i bez papierowych kartoników. Działa we wszystkich trzech salonach.",
+    "steps": {
+      "1": "Dodaj kartę do telefonu — pierwsza pieczątka w prezencie",
+      "2": "Pokaż kod przy kasie po każdej wizycie",
+      "3": "Po 10 pieczątkach strzyżenie gratis"
+    },
+    "btn": "Dodaj kartę do telefonu",
+    "note": "Rejestracja zajmuje ok. 30 sekund.",
+    "card_alt": "Karta lojalnościowa Grizzly w Apple Wallet i Google Wallet"
+  },
   "locations": {
     "label":       "KONTAKT",
     "find_us":     "ZNAJDŹ NAS",
