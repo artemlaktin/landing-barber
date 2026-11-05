@@ -37,8 +37,8 @@ const { t } = useI18n()
         class="loyalty__card"
         src="/img/brand/loyalty-card.webp"
         :alt="t('loyalty.card_alt')"
-        width="800"
-        height="500"
+        width="510"
+        height="960"
         loading="lazy"
       >
     </div>
@@ -146,13 +146,13 @@ const { t } = useI18n()
 
   &__card {
     width: 100%;
-    max-width: 560px;
+    max-width: 320px;
     height: auto;
     align-self: center;
-    filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.5));
 
     @media (min-width: 1280px) {
-      transform: rotate(-4deg);
+      max-width: 380px;
+      margin-right: 80px;
     }
   }
 }
