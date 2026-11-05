@@ -94,3 +94,6 @@ export const THREADS: SocialLink[] = [
 export const FACEBOOK: SocialLink[] = [
   {label: 'NIEBUSZEWO', handle: 'NIEBUSZEWO', href: '#'},
 ]
+
+// Wallet loyalty card (Apple Wallet / Google Wallet) — sign-up link, one card for all locations
+export const LOYALTY_URL = 'https://walletloyaltycard.com/c/grizzly-barbershop-niebuszewo-3jovj9'

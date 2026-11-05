@@ -68,6 +68,21 @@
     "title":   "SZCZECIN",
     "img_alt": "Map of Grizzly Barbershop locations in Szczecin"
   },
+  "loyalty": {
+    "label": "LOYALTY CARD",
+    "card": "GRIZZLY",
+    "title": "Every 10th haircut",
+    "title_accent": "is free",
+    "subtitle": "Your Grizzly card lives in your phone — in Apple Wallet or Google Wallet. No app, no paper cards. Works at all three shops.",
+    "steps": {
+      "1": "Add the card to your phone — your first stamp is on us",
+      "2": "Show the code at the desk after each visit",
+      "3": "Collect 10 stamps and get a free haircut"
+    },
+    "btn": "Add the card to your phone",
+    "note": "Sign-up takes about 30 seconds.",
+    "card_alt": "Grizzly loyalty card in Apple Wallet and Google Wallet"
+  },
   "locations": {
     "label":       "CONTACTS",
     "find_us":     "FIND US",

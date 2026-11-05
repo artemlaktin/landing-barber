@@ -2,6 +2,7 @@
 import MastersSection from "@components/MastersSection.vue"
 import ReviewsSection from "@components/ReviewsSection.vue"
 import GallerySection from "@components/GallerySection.vue"
+import LoyaltySection from "@components/LoyaltySection.vue"
 import LocationsSection from "@components/LocationsSection.vue"
 import MapSection from "@components/MapSection.vue"
 import FooterSection from "@components/FooterSection.vue"
@@ -98,6 +99,7 @@ useHead({
     <MastersSection/>
     <ReviewsSection/>
     <GallerySection/>
+    <LoyaltySection/>
     <LocationsSection/>
     <MapSection/>
     <FooterSection/>
