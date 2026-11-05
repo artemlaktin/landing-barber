@@ -10,6 +10,8 @@ export interface Master {
   location: string
   instagram?: string | null
   facebook?: string | null
+  /** Личная ссылка мастера в Booksy. Если нет — кнопка ведёт на общую страницу точки. */
+  booksyUrl?: string | null
 }
 
 export const masters: Master[] = [
@@ -48,6 +50,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/piastow/stas-senior.webp',
     location: 'Piastów',
+    booksyUrl: 'https://booksy.com/pl-pl/115246_grizzly-barber-shop-piastow_barber-shop_18078_szczecin/staffer/335932',
   },
   {
     name: 'Julia Senior',
@@ -60,6 +63,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/piastow/julia-senior.webp',
     location: 'Piastów',
+    booksyUrl: 'https://booksy.com/pl-pl/115246_grizzly-barber-shop-piastow_barber-shop_18078_szczecin/staffer/712554',
   },
   {
     name: 'Julia Blond',
@@ -72,6 +76,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/piastow/julia-blond.webp',
     location: 'Piastów',
+    booksyUrl: 'https://booksy.com/pl-pl/115246_grizzly-barber-shop-piastow_barber-shop_18078_szczecin/staffer/423481',
   },
   {
     name: 'Danil',
@@ -84,6 +89,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/niebuszewo/danil.webp',
     location: 'Niebuszewo',
+    booksyUrl: 'https://booksy.com/pl-pl/220732_grizzly-barber-shop-niebuszewo_barber-shop_18078_szczecin/staffer/706757',
   },
   {
     name: 'Matvij',
@@ -96,6 +102,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/piastow/matvij.webp',
     location: 'Piastów',
+    booksyUrl: 'https://booksy.com/pl-pl/115246_grizzly-barber-shop-piastow_barber-shop_18078_szczecin/staffer/575372',
   },
   {
     name: 'Vlad',
@@ -108,6 +115,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/piastow/vlad.webp',
     location: 'Piastów',
+    booksyUrl: 'https://booksy.com/pl-pl/115246_grizzly-barber-shop-piastow_barber-shop_18078_szczecin/staffer/641752',
   },
   {
     name: 'Dimas',
@@ -120,6 +128,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/mickiewicza/dimas.webp',
     location: 'Mickiewicza',
+    booksyUrl: 'https://booksy.com/pl-pl/263864_grizzly-barber-shop-mickiewicza_barber-shop_18078_szczecin/staffer/667089',
   },
   {
     name: 'Juli',
@@ -132,6 +141,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/mickiewicza/juli.webp',
     location: 'Mickiewicza',
+    booksyUrl: 'https://booksy.com/pl-pl/263864_grizzly-barber-shop-mickiewicza_barber-shop_18078_szczecin/staffer/627509',
   },
   {
     name: 'Michal',
@@ -144,6 +154,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/niebuszewo/michal.webp',
     location: 'Niebuszewo',
+    booksyUrl: 'https://booksy.com/pl-pl/220732_grizzly-barber-shop-niebuszewo_barber-shop_18078_szczecin/staffer/764913',
   },
   {
     name: 'Dima Junior',
@@ -156,6 +167,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/mickiewicza/dima-junior.webp',
     location: 'Mickiewicza',
+    booksyUrl: 'https://booksy.com/pl-pl/263864_grizzly-barber-shop-mickiewicza_barber-shop_18078_szczecin/staffer/809595',
   },
   {
     name: 'Ira Junior',
@@ -168,6 +180,7 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/mickiewicza/ira-junior.webp',
     location: 'Mickiewicza',
+    booksyUrl: 'https://booksy.com/pl-pl/263864_grizzly-barber-shop-mickiewicza_barber-shop_18078_szczecin/staffer/639703',
   },
   {
     name: 'Olka Junior',
@@ -180,5 +193,6 @@ export const masters: Master[] = [
     },
     photo: '/img/masters/piastow/olka-junior.webp',
     location: 'Piastów',
+    booksyUrl: 'https://booksy.com/pl-pl/115246_grizzly-barber-shop-piastow_barber-shop_18078_szczecin/staffer/816979',
   },
 ]
