@@ -62,7 +62,8 @@ function closeMaster() {
 }
 
 function bookSession() {
-  const url = activeMaster.value ? BOOKSY_LINKS[activeMaster.value.location] : undefined
+  const master = activeMaster.value
+  const url = master ? (master.booksyUrl || BOOKSY_LINKS[master.location]) : undefined
   closeMaster()
   if (url) {
     window.open(url, '_blank', 'noopener,noreferrer')
